@@ -1,0 +1,19 @@
+{
+  "name": "@coded-bear/tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./tailwind.config.ts"
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.{html,css,scss,cjs,mjs,js,jsx,ts,tsx}\"",
+    "clean": "rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@coded-bear/typescript-config": "workspace:*",
+    "@types/node": "^20.14.10",
+    "prettier": "^3.3.2",
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
