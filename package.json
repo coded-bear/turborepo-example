@@ -2,17 +2,18 @@
   "name": "turborepo-example",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{html,css,scss,cjs,mjs,js,jsx,ts,tsx}\""
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
-    "turbo": "^2.0.6",
-    "typescript": "^5.4.5"
+    "prettier": "^3.3.2",
+    "turbo": "^2.0.6"
   },
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.5.0",
   "engines": {
     "node": ">=18"
   }

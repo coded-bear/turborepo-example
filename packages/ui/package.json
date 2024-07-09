@@ -1,5 +1,5 @@
 {
-  "name": "@repo/ui",
+  "name": "@coded-bear/ui",
   "version": "0.0.0",
   "private": true,
   "exports": {
@@ -9,11 +9,12 @@
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component"
+    "generate:component": "turbo gen react-component",
+    "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@coded-bear/eslint-config": "workspace:*",
+    "@coded-bear/typescript-config": "workspace:*",
     "@turbo/gen": "^1.12.4",
     "@types/node": "^20.11.24",
     "@types/eslint": "^8.56.5",

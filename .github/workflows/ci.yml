@@ -8,13 +8,9 @@ on:
 
 jobs:
   build:
-    name: Build and Test
+    name: Build, Test and Lint
     timeout-minutes: 15
     runs-on: ubuntu-latest
-    # To use Remote Caching, uncomment the next lines and follow the steps below.
-    # env:
-    #  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-    #  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
 
     steps:
       - name: Check out code
@@ -24,7 +20,7 @@ jobs:
 
       - uses: pnpm/action-setup@v3
         with:
-          version: 9.1.1
+          version: 9.5.0
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
@@ -40,3 +36,6 @@ jobs:
 
       # - name: Test
       #   run: pnpm run test
+
+      - name: Lint
+        run: pnpm run lint
